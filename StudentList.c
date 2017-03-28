@@ -89,6 +89,15 @@ int elem_swap(struct student_struct* elem1, struct student_struct* elem2){
 
   elem1->last_node = last2;
   elem1->next_node = next2;
+
+  if(next1 == elem2){
+    elem1->last_node = elem2;
+    elem2->next_node = elem1;
+  }
+  else if(last1 == elem2){
+    elem1->next_node = elem2;
+    elem2->last_node = elem1;
+  }
   return 0;
 }
 
