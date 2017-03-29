@@ -62,6 +62,7 @@ int selection_sort_list_ascent(struct list_struct* L){
     if(min_node->next_node == NULL)
       L->list_end = select_node;
     elem_swap(select_node, min_node);
+    select_node = min_node;
     select_node = select_node->next_node;
   }
 }
